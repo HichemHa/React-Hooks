@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './component/NavBar';
+import MovieList from './MovieList';
+
+import React,{ useState } from 'react';
+
+import ScreenOrientationReact from 'screen-orientation-react';
+import Footer from './Footer';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [filtredText , setFiltredText] = useState('');
+  const [R,setR]=useState(0);
+  // setRaing = (e) => console.log(e);
+
+    return (
+     
+    <div className="App" > 
+   
+        <NavBar setFiltredText={setFiltredText} setR={setR}/>
+        <MovieList filtredText={filtredText} R={R} />
+
+       <Footer/>
     </div>
   );
 }
