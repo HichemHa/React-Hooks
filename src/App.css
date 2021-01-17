@@ -5,9 +5,7 @@
 body{
   background-color: #007bff !important;
 }
-p{
-  /* height: 96px; */
-}
+
 @-webkit-keyframes NAME-YOUR-ANIMATION {
   0%   { opacity: 0; }
   100% { opacity: 1; }
@@ -41,7 +39,7 @@ p{
   
   background-color: rgb(243, 234, 234);
   padding: 2px;
- 
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -72,6 +70,7 @@ margin-bottom: 20px;
   font-size: xx-large !important;
 }
 .form-inline{
+  flex-wrap: wrap;
   font-weight: bold;
   color: white;
   font-size: large !important;
@@ -99,4 +98,24 @@ margin-bottom: 20px;
   color: white;
   text-align: center;
 
+}
+.moreDesc{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.descrp{flex-wrap: wrap;
+  width: max-content;
+  padding: 20px;
+  background-color: #f2f4f6;
+  color: black;
+  font-size: x-large;
+
+}
+.video{
+  margin: 30px;
+}
+.more{
+  text-align: center;
+  color: white;
 }

@@ -1,34 +1,30 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
-// import ReactStars from "react-rating-stars-component";
-// import StarRatings from 'react-star-ratings';
 import { Rating } from '@material-ui/lab';
+import { Link }   from 'react-router-dom'
+import More from './component/More'
+import { useParams } from 'react-router-dom';
 
 
-
-function MovieCard({titre,desc,imgUrl,afficherate}) {
+function MovieCard({titre,desc,imgUrl,afficherate,id}) {
     return (
+      
        
-       
+        <Link to={`/more/${id}`}>
             <div className="Card" style = {{borderRadius: '100px!important'}}>
-                {/* <a href="#" className="ff" > */}
                 <img src={imgUrl} alt="movie" width={396} height={502} />
                 <div className="prop">
-                    <h1 style={{color: "red"}}> {titre} </h1>
-                    <p> {desc} </p>
-         
+                    <h1 key={id} style={{color: "red"}}> {titre} </h1>
                     <Rating
                         value={afficherate}
                         max={5}
                         disabled={true}
                     />
-    
-                   
                 </div>
-                </div>
-            
-               
-    )
+            </div>
+                
+        </Link>
+
+    );
 }
 
 export default MovieCard
